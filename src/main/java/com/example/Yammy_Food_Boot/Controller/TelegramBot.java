@@ -230,4 +230,14 @@ public class TelegramBot extends TelegramLongPollingBot {
     public void startAnswer(Message command) {
         sendWithoutURL(command);
     }
+
+    public void sendAnswerMessage(SendMessage message) {
+        if (message != null) {
+            try {
+                execute(message);
+            } catch (TelegramApiException e) {
+                log.error(e);
+            }
+        }
+    }
 }
