@@ -20,7 +20,6 @@ public class UpdateController {
 
     public UpdateController(MessageUtils messageUtils, UpdateProducerImpl updateProducerImpl) {
         this.messageUtils = messageUtils;
-
         this.updateProducerImpl = updateProducerImpl;
     }
 
