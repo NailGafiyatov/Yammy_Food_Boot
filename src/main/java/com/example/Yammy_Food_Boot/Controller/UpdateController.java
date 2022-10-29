@@ -25,6 +25,9 @@ public class UpdateController {
         }
     }
 
+    private void distrubiteMessageByType(Update update) {
+    }
+
     private void distributeMessageByType(Update update) {
         var message = update.getMessage();
         if (message.getText() != null) {
