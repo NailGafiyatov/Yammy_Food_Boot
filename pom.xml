@@ -56,6 +56,13 @@
 			<version>1.0--SNAPSHOT</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>common-rabbitmq</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+
 	</dependencies>
 
 
@@ -82,7 +89,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>com.example.Yammy_Food_Boot.YammyFoodBootApplication</mainClass>
+							<mainClass>com.example.Yammy_Food_Bot.YammyFoodBotApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

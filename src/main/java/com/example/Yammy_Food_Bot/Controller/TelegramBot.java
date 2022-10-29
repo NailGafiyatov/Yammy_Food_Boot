@@ -1,4 +1,4 @@
-package com.example.Yammy_Food_Boot.Controller;
+package com.example.Yammy_Food_Bot.Controller;
 
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -125,6 +125,22 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
+        updateController.processUpdate(update);
+    }
+
+    public void sendAnswerMessage(SendMessage message) {
+        if (message != null) {
+            try {
+                execute(message);
+            } catch (TelegramApiException e) {
+                log.error(e);
+            }
+        }
+    }
+
+    /*
+    @Override
+    public void onUpdateReceived(Update update) {
 
         if (update.hasMessage() && update.getMessage().hasText()) {
             String messageText = update.getMessage().getText();
@@ -209,7 +225,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 
 
 
-            /*
+
             if (update.getCallbackQuery().getData().equals("start1")) {
                 try {
                     execute(
@@ -223,8 +239,6 @@ public class TelegramBot extends TelegramLongPollingBot {
                     e.printStackTrace();
                 }
             }
-
-             */
         }
     }
     public void startAnswer(Message command) {
@@ -240,4 +254,6 @@ public class TelegramBot extends TelegramLongPollingBot {
             }
         }
     }
+
+     */
 }

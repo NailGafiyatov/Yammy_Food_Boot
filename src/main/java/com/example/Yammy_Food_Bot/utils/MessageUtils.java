@@ -1,4 +1,4 @@
-package com.example.Yammy_Food_Boot.utils;
+package com.example.Yammy_Food_Bot.utils;
 
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
